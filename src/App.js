@@ -1,13 +1,20 @@
-
+import { Routes, Route, Link } from "react-router-dom";
+import './App.css';
+import Homepage from "./components/Homepage/Homepage";
+import LatestNotice from "./components/LatestNotice/LatestNotice";
+import UpcomingNotice from "./components/UpcomingNotice/UpcomingNotice";
 
 function App() {
   return (
-    <div>
-      <h1>
-        Notice board
-      </h1>
-    </div>
+    <div className="App">
+    <Routes>
+      <Route path="/" element={<Homepage />} />
+      <Route path="dashboard/latestNews" element={<LatestNotice />} />
+      <Route path="dashboard/upcomingNews" element={<UpcomingNotice />} />
+    </Routes>
+  </div>
   );
 }
 
 export default App;
+
