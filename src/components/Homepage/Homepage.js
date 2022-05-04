@@ -8,8 +8,8 @@ const Homepage = () => {
           <div class="col-md-8">
             <img class="nstu_logo p-2" src="image/Logo_of_Noakhali_Science_and_Technology_University.gif" alt="NSTU LOGO"/>
             <div class="nstu">
-              <h5 class="text-uppercase">Noakhali Science and Technology University</h5>
-              <h5 class="text-uppercase">Department of Information and Communication</h5>
+              <h5 class="text-uppercase text-left">Noakhali Science and Technology University</h5>
+              <h5 class="text-uppercase text-left">Department of Information and Communication Enginerring</h5>
             </div>
 
            

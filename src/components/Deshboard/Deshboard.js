@@ -7,17 +7,17 @@ const Deshboard = () => {
     <div class="row">
         <div class="col-md-12 ">
             <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="javascript:void(0)" class="closebtn" onClick="closeNav()">×</a>
                 <ul>
                     <li><img class="profile-image" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__480.png" width="100" height="100" alt=""/></li>
-                    <li><a href="#upload" onclick="myFunction()">Upload Notice</a></li>
-                    <li><a href="#list-of-notice" onclick="myFunction2()">List of Notices</a></li>
-                    <li><a href="#profile" onclick="myFunction3()">Profile</a></li>
-                    <li><a href="#edit-profile" onclick="myFunction4()">Edit Profile</a></li>
+                    <li><a href="#upload" onClick="myFunction()">Upload Notice</a></li>
+                    <li><a href="#list-of-notice" onClick="myFunction2()">List of Notices</a></li>
+                    <li><a href="#profile" onClick="myFunction3()">Profile</a></li>
+                    <li><a href="#edit-profile" onClick="myFunction4()">Edit Profile</a></li>
                 </ul>
               </div>
             <div id="main">
-                <button class="openbtn" onclick="openNav()">☰ Open Sidebar</button>  
+                <button class="openbtn" onClick="openNav()">☰ Open Sidebar</button>  
                  
                 <div id="upload" class="pt-4">
                     <h2>Upload Notice</h2>

@@ -6,11 +6,11 @@
 .nstu_logo{
      height: 80px;
      padding: 5px;
-     float:left;
+     float:left; 
     
 }
 .nstu{
-    
+    float: left;
     margin-top: 15px;
     padding-left: 20px;
 }
