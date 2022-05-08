@@ -7,8 +7,7 @@ const LatestNotice = () => {
 
             <h4>My name is noman</h4>
 
-            <h5>this is audity</h5>
-            <h5>this is notice board</h5>
+            
 
         </div>
     );

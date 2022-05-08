@@ -16,8 +16,8 @@ function App() {
       <Route path="/Register" element={<Register />} />
       <Route path="/Deshboard" element={<Deshboard />} />
 
-      <Route path="dashboard/latestNews" element={<LatestNotice />} />
-      <Route path="dashboard/upcomingNews" element={<UpcomingNotice />} />
+      {/* <Route path="dashboard/latestNews" element={<LatestNotice />} />
+      <Route path="dashboard/upcomingNews" element={<UpcomingNotice />} /> */}
     </Routes>
   </div>
   );
