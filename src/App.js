@@ -1,11 +1,13 @@
 import { Routes, Route, Link } from "react-router-dom";
 import './App.css';
 import Homepage from "./components/Homepage/Homepage";
-import LatestNotice from "./components/LatestNotice/LatestNotice";
 import UpcomingNotice from "./components/UpcomingNotice/UpcomingNotice";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Deshboard from "./components/Deshboard/Deshboard";
+import ManageNotice from "./components/ManageNotice/ManageNotice";
+import AddNotice from "./components/AddNotice/AddNotice";
+import Form from "./components/Form/Form";
 
 function App() {
   return (
@@ -16,8 +18,10 @@ function App() {
       <Route path="/Register" element={<Register />} />
       <Route path="/Deshboard" element={<Deshboard />} />
 
-      {/* <Route path="dashboard/latestNews" element={<LatestNotice />} />
-      <Route path="dashboard/upcomingNews" element={<UpcomingNotice />} /> */}
+      {/* <Route path="/admin" element={<AddNotice/>} /> */}
+      <Route path="/upcomingNotice" element={<UpcomingNotice />} />
+      <Route path="/updateNotice" element={<ManageNotice/>} />
+      <Route path="/form" element={<Form/>} />
     </Routes>
   </div>
   );

@@ -39,6 +39,7 @@ const Deshboard = () => {
                                 <input type="text" class="form-control form-control-sm" id="short-title" required placeholder="Type a Short Title"/>
                               </div>
                         </div>
+                        
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="inputBatch">Batch</label>
