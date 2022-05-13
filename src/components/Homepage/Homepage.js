@@ -41,7 +41,7 @@ const Homepage = () => {
                     <li>Lorem ipsum dolor sit amet.</li>
                 </ul>
                  <ul class="notice mt-2">
-                    <h4>Latest news</h4>
+                    <h4>Upcoming Events</h4>
 
                     <li>Lorem ipsum dolor sit amet.</li>
                     <li>Lorem ipsum dolor sit amet.</li>
@@ -189,19 +189,22 @@ const Homepage = () => {
                   </div>
             </div>
             <div class="col-md-2 mt-1 marquee-image">
-              <h4 class="marquee-heading ">Images of ICE </h4>
+              <h4 class="marquee-heading ">Achievements Of ICE </h4>
               <div class="marqueeTwo">
                 
                 <ul class="marqueeTwo-content text-center">
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
-                  <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt=""/></li>
+                  <li><img src="./image/ICE_1.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_2.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_3.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_4.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_5.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_6.jpeg " alt=""/></li>
+                  <li><img src=" ./image/ICE_7.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_8.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_9.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_10.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_11.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_12.jpeg" alt=""/></li>
                 </ul>
               </div>
             </div>

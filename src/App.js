@@ -6,6 +6,7 @@ import UpcomingNotice from "./components/UpcomingNotice/UpcomingNotice";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import Deshboard from "./components/Deshboard/Deshboard";
+import NewForm from "./components/NewForm/NewForm";
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
 
       <Route path="dashboard/latestNews" element={<LatestNotice />} />
       <Route path="dashboard/upcomingNews" element={<UpcomingNotice />} />
+      <Route path="/NewForm" element={<NewForm />} />
+
     </Routes>
   </div>
   );
