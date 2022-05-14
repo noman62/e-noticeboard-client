@@ -21,7 +21,7 @@ const ManageNotice = () => {
             .then(result => {
                 if (result) {
                    
-                    
+                    window.location.reload(false);  
                 }
             })
 
@@ -41,21 +41,21 @@ const ManageNotice = () => {
                     <thead style={{backgroundColor:'#20B2AA'}}>
                         <tr>
                             <th className="text-white" scope="col">index no</th>
-                            <th className="text-white" scope="col">Notice Title</th>
+                            <th className="text-white" scope="col">Notice No</th>
                             <th className="text-white" scope="col">batchName</th>
                             <th className="text-white" scope="col">Last Date</th>
                             <th className="text-white" scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {ManageNotice.map((product, index) => (
+                        {ManageNotice.reverse().map((product, index) => (
                             <tr>
                                 <th scope="row">{index + 1}</th>
-                                <td>{product.title}</td>
+                                <td>{product.noticeNo}</td>
                                 <td>{product.batchName}</td>
                                 <td>{product.date}</td>
                                 <td>
-                                    <button className="btn btn-outline-primary bg-warning mr-2">Edit</button>
+                                    <Link to={`/update/${product._id}`}><button className="btn btn-outline-primary bg-warning mr-2">Edit</button></Link>
                                     <button onClick={() => handleDelete(product._id)} className="btn btn-danger mr-2">Delete</button>
 
                                 </td>
