@@ -2,7 +2,6 @@ import React from 'react';
 
 const Screen = (props) => {
   const { index,notice } = props;
-  console.log(props);
   return (
     <div className={index===0 ? "carousel-item active":"carousel-item"}>
       <div class="row">

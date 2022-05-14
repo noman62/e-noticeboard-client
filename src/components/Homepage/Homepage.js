@@ -1,9 +1,11 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import Screen from '../Screen/Screen';
+import UpcomingNotice from '../UpcomingNotice/UpcomingNotice';
 
 const Homepage = () => {
   const [notices, setNotices] = useState([]);
+  let arr;
   const fetchData = async () => {
     const response = await fetch('http://localhost:8080/products');
     const data = await response.json();
@@ -15,6 +17,7 @@ const Homepage = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
 
   return (
     <div>
@@ -45,33 +48,25 @@ const Homepage = () => {
         <div class="row">
           <div class="col-md-2 ">
             <ul class="notice mt-1">
-            <h4>Latest news</h4>
-            {
-              notices.map(latest=>{
-                return(
-                  <div>
-                 
-              <li>{latest.title}</li>
-          
-                  </div>
-                )
-              })
-            }
+              <h4>Notice</h4>
+              {
+                notices.reverse().map(latest => {
+                  return (
+                    <div>
+
+                      <li><marquee behavior="" direction="">{latest.title}</marquee></li>
+
+                    </div>
+                  )
+                })
+              }
             </ul>
             <ul class="notice mt-2">
-              <h4>Latest news</h4>
+              <h4>Upcoming Events</h4>
 
               {
-              notices.map(latest=>{
-                return(
-                  <div>
-                 
-              <li>{latest.title}</li>
-          
-                  </div>
-                )
-              })
-            }
+                 notices.reverse().map((notice,index)=><UpcomingNotice notice={notice}/>)
+              }
             </ul>
 
           </div>
@@ -118,19 +113,23 @@ const Homepage = () => {
             </div>
           </div>
           <div class="col-md-2 mt-1 marquee-image">
-            <h4 class="marquee-heading ">Images of ICE </h4>
+            <h4 class="marquee-heading ">Achievements </h4>
             <div class="marqueeTwo">
 
               <ul class="marqueeTwo-content text-center">
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
-                <li><img src="https://thumbs.dreamstime.com/b/spring-flowers-blue-crocuses-drops-water-backgro-background-tracks-rain-113784722.jpg" alt="" /></li>
+              <li><img src="./image/ICE_1.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_2.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_3.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_4.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_5.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_6.jpeg " alt=""/></li>
+                  <li><img src=" ./image/ICE_7.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_8.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_9.jpeg " alt=""/></li>
+                  <li><img src="./image/ICE_10.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_11.jpeg" alt=""/></li>
+                  <li><img src="./image/ICE_12.jpeg" alt=""/></li>
+
               </ul>
             </div>
           </div>
@@ -153,9 +152,19 @@ const Homepage = () => {
               <h5 class="text-center pt-1">Top Notice</h5>
             </div>
             <div class="col-10">
-              <marquee class="h6">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Provident, cupiditate dolorum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora optio autem repellendus magni provident quam praesentium cupiditate voluptate error sunt!
-              </marquee>
+            {
+                notices.reverse().map((latest,index) => {
+                  if(index===0){
+                    return (
+                      <div >
+  
+                        <marquee behavior="" direction="">{latest.shortTitle}</marquee>
+  
+                      </div>
+                    )
+                  }
+                })
+              }
             </div>
           </div>
 
