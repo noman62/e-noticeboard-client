@@ -5,7 +5,7 @@ import UpcomingNotice from '../UpcomingNotice/UpcomingNotice';
 
 const Homepage = () => {
   const [notices, setNotices] = useState([]);
-  let arr;
+
   const fetchData = async () => {
     const response = await fetch('http://localhost:8080/products');
     const data = await response.json();
@@ -65,7 +65,7 @@ const Homepage = () => {
               <h4>Upcoming Events</h4>
 
               {
-                 notices.reverse().map((notice,index)=><UpcomingNotice notice={notice}/>)
+                notices.reverse().map((notice, index) => <UpcomingNotice notice={notice} />)
               }
             </ul>
 
@@ -117,19 +117,22 @@ const Homepage = () => {
             <div class="marqueeTwo">
 
               <ul class="marqueeTwo-content text-center">
-              <li><img src="./image/ICE_1.jpeg" alt=""/></li>
-                  <li><img src="./image/ICE_2.jpeg" alt=""/></li>
-                  <li><img src="./image/ICE_3.jpeg" alt=""/></li>
-                  <li><img src="./image/ICE_4.jpeg " alt=""/></li>
-                  <li><img src="./image/ICE_5.jpeg " alt=""/></li>
-                  <li><img src="./image/ICE_6.jpeg " alt=""/></li>
-                  <li><img src=" ./image/ICE_7.jpeg" alt=""/></li>
-                  <li><img src="./image/ICE_8.jpeg " alt=""/></li>
-                  <li><img src="./image/ICE_9.jpeg " alt=""/></li>
-                  <li><img src="./image/ICE_10.jpeg" alt=""/></li>
-                  <li><img src="./image/ICE_11.jpeg" alt=""/></li>
-                  <li><img src="./image/ICE_12.jpeg" alt=""/></li>
-
+                <li><img src="./image/ICE_1.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_2.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_4.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_5.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_6.jpeg " alt="" /></li>
+                <li><img src=" ./image/ICE_7.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_8.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_9.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_10.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_11.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_12.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_13.jpg" alt="" /></li>
+                <li><img src="./image/ICE_14.jpg" alt="" /></li>
+                <li><img src="./image/ICE_15.jpg" alt="" /></li>
+                <li><img src="./image/ICE_16.jpg" alt="" /></li>
+                <li><img src="./image/ICE_17.jpg" alt="" /></li>
               </ul>
             </div>
           </div>
@@ -152,14 +155,14 @@ const Homepage = () => {
               <h5 class="text-center pt-1">Top Notice</h5>
             </div>
             <div class="col-10">
-            {
-                notices.reverse().map((latest,index) => {
-                  if(index===0){
+              {
+                notices.reverse().map((latest, index) => {
+                  if (index === 0) {
                     return (
                       <div >
-  
+
                         <marquee behavior="" direction="">{latest.shortTitle}</marquee>
-  
+
                       </div>
                     )
                   }
