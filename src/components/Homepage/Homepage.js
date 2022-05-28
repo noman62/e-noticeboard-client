@@ -30,8 +30,7 @@ const Homepage = () => {
               <h5 class="text-uppercase text-left font-weight-bolder">Noakhali Science and Technology University</h5>
               <h5 class="text-uppercase text-left font-weight-bolder">Department of Information and Communication Engineering</h5>
 
-              <h5 class="text-uppercase text-left">Noakhali Science and Technology University</h5>
-              <h5 class="text-uppercase text-left">Department of Information and Communication Engineering</h5>
+              
 
             </div>
 
@@ -52,9 +51,9 @@ const Homepage = () => {
 
 
 
-        <div class="row mt-3">
+       
 
-        <div class="row">
+        <div class="row mt-3">
 
           <div class="col-md-2 ">
             <ul class="notice mt-1">
@@ -88,27 +87,6 @@ const Homepage = () => {
             </ul>
 
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
           <div class="col-md-8 p-1">
             <div id="demo" class="carousel slide" data-ride="carousel">
               <ul class="carousel-indicators">
@@ -156,42 +134,10 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        
-
-            </div>
-          </div>
-          <div class="col-md-2 mt-1 marquee-image">
-            <h4 class="marquee-heading ">Achievements </h4>
-            <div class="marqueeTwo">
-
-              <ul class="marqueeTwo-content text-center">
-                <li><img src="./image/ICE_1.jpeg" alt="" /></li>
-                <li><img src="./image/ICE_2.jpeg" alt="" /></li>
-                <li><img src="./image/ICE_4.jpeg " alt="" /></li>
-                <li><img src="./image/ICE_5.jpeg " alt="" /></li>
-                <li><img src="./image/ICE_6.jpeg " alt="" /></li>
-                <li><img src=" ./image/ICE_7.jpeg" alt="" /></li>
-                <li><img src="./image/ICE_8.jpeg " alt="" /></li>
-                <li><img src="./image/ICE_9.jpeg " alt="" /></li>
-                <li><img src="./image/ICE_10.jpeg" alt="" /></li>
-                <li><img src="./image/ICE_11.jpeg" alt="" /></li>
-                <li><img src="./image/ICE_12.jpeg" alt="" /></li>
-                <li><img src="./image/ICE_13.jpg" alt="" /></li>
-                <li><img src="./image/ICE_14.jpg" alt="" /></li>
-                <li><img src="./image/ICE_15.jpg" alt="" /></li>
-                <li><img src="./image/ICE_16.jpg" alt="" /></li>
-                <li><img src="./image/ICE_17.jpg" alt="" /></li>
-              </ul>
-            </div>
-          </div>
+         
+          
         </div>
-        <div class="row mb-2">
-          <div class="col-sm-12">
-
-          </div>
-        </div>
-
-
+       
 
 
 
@@ -227,22 +173,7 @@ const Homepage = () => {
                 </p>
 
             </div>
-            <div class="col-10">
-              {
-                notices.reverse().map((latest, index) => {
-                  if (index === 0) {
-                    return (
-                      <div >
-
-                        <marquee behavior="" direction="">{latest.shortTitle}</marquee>
-
-                      </div>
-                    )
-                  }
-                })
-              }
-
-            </div>
+            
           </div>
 
         </footer>
@@ -251,7 +182,7 @@ const Homepage = () => {
 
 
       </div>
-    </div>
+    
   );
 };
 
