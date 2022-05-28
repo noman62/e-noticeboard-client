@@ -27,7 +27,7 @@ const Homepage = () => {
             <img class="nstu_logo p-2" src="image/Logo_of_Noakhali_Science_and_Technology_University.gif" alt="NSTU LOGO" />
             <div class="nstu">
               <h5 class="text-uppercase text-left">Noakhali Science and Technology University</h5>
-              <h5 class="text-uppercase text-left">Department of Information and Communication Enginerring</h5>
+              <h5 class="text-uppercase text-left">Department of Information and Communication Engineering</h5>
             </div>
 
 
@@ -54,7 +54,7 @@ const Homepage = () => {
                   return (
                     <div>
 
-                      <li><marquee behavior="" direction="">{latest.title}</marquee></li>
+                      <li style={{fontSize:'13px'}}>{latest.title}</li>
 
                     </div>
                   )
@@ -65,7 +65,15 @@ const Homepage = () => {
               <h4>Upcoming Events</h4>
 
               {
-                notices.reverse().map((notice, index) => <UpcomingNotice notice={notice} />)
+                notices.reverse().map(latest => {
+                  return (
+                    <div>
+
+                      <li style={{fontSize:'13px'}}>{latest.utitle}</li>
+
+                    </div>
+                  )
+                })
               }
             </ul>
 

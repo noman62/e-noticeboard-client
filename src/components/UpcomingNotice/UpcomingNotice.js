@@ -5,7 +5,7 @@ const UpcomingNotice = (props) => {
     return (
         <div>
 
-        <li><marquee behavior="" direction="">{props.notice.utitle}</marquee></li>
+        <li>{props.notice.utitle}</li>
 
       </div>
     );
