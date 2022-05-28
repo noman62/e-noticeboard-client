@@ -26,8 +26,13 @@ const Homepage = () => {
           <div class="col-md-8">
             <img class="nstu_logo p-2" src="image/Logo_of_Noakhali_Science_and_Technology_University.gif" alt="NSTU LOGO" />
             <div class="nstu">
+
+              <h5 class="text-uppercase text-left font-weight-bolder">Noakhali Science and Technology University</h5>
+              <h5 class="text-uppercase text-left font-weight-bolder">Department of Information and Communication Engineering</h5>
+
               <h5 class="text-uppercase text-left">Noakhali Science and Technology University</h5>
               <h5 class="text-uppercase text-left">Department of Information and Communication Engineering</h5>
+
             </div>
 
 
@@ -45,7 +50,12 @@ const Homepage = () => {
 
 
 
+
+
+        <div class="row mt-3">
+
         <div class="row">
+
           <div class="col-md-2 ">
             <ul class="notice mt-1">
               <h4>Notice</h4>
@@ -118,6 +128,36 @@ const Homepage = () => {
               <a class="carousel-control-next" href="#demo" data-slide="next">
                 <span class="carousel-control-next-icon"></span>
               </a>
+
+            </div>
+          </div>
+          <div class="col-md-2 mt-1 marquee-image">
+            <h4 class="marquee-heading ">Achievements </h4>
+            <div class="marqueeTwo">
+
+              <ul class="marqueeTwo-content text-center">
+                <li><img src="./image/ICE_1.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_2.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_4.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_5.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_6.jpeg " alt="" /></li>
+                <li><img src=" ./image/ICE_7.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_8.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_9.jpeg " alt="" /></li>
+                <li><img src="./image/ICE_10.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_11.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_12.jpeg" alt="" /></li>
+                <li><img src="./image/ICE_13.jpg" alt="" /></li>
+                <li><img src="./image/ICE_14.jpg" alt="" /></li>
+                <li><img src="./image/ICE_15.jpg" alt="" /></li>
+                <li><img src="./image/ICE_16.jpg" alt="" /></li>
+                <li><img src="./image/ICE_17.jpg" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+
             </div>
           </div>
           <div class="col-md-2 mt-1 marquee-image">
@@ -156,11 +196,36 @@ const Homepage = () => {
 
 
 
+
+
         <footer>
 
           <div class="row marquee" >
             <div class="col-2 top-notice ">
               <h5 class="text-center pt-1">Top Notice</h5>
+
+            </div>
+            <div class="col-8">
+              {
+                notices.reverse().map((latest, index) => {
+                  if (index === 0) {
+                    return (
+                      <div >
+
+                        <marquee behavior="" direction="">{latest.shortTitle}</marquee>
+
+                      </div>
+                    )
+                  }
+                })
+              }
+            </div>
+            <div class="col-2 top-time ">
+              <p class="mb-0">
+                <b>Time:</b> 11:32 <br/>
+                <b>Date:</b> 11/11/22
+                </p>
+
             </div>
             <div class="col-10">
               {
@@ -176,6 +241,7 @@ const Homepage = () => {
                   }
                 })
               }
+
             </div>
           </div>
 

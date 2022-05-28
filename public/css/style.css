@@ -15,7 +15,10 @@
     padding-left: 20px;
 }
 .main-heading{
-    border-bottom: 5px solid navy;
+    background-color: #010f4e;
+    color: white;
+    font-style:oblique;
+    border-bottom: 5px solid #010f4e;
 }
 .marquee{
     border: 2px solid rgb(129, 129, 255);
@@ -24,12 +27,21 @@
     box-shadow: 2px 2px 5px #54a2a1;
 }
 .marquee .top-notice{
-    background-color: #025585;
+    background-color: #010f4e;
     color: rgb(253, 253, 253);
     border: 2px solid rgb(255, 255, 255);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 1px 1px 1px rgb(255, 255, 255);
+}
+.marquee .top-time{
+    background-color: #010f4e;
+    color: rgb(253, 253, 253);
+    /* border: 2px solid rgb(255, 255, 255);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    /* box-shadow: 1px 1px 1px rgb(255, 255, 255); */
+    margin-bottom: 0px;
 }
 .marquee marquee{
     margin-top: 7px;
@@ -37,22 +49,21 @@
     
 }
 .slide{
-    border: 4px solid rgb(1, 56, 134);
+    border: 4px solid #010f4e;
 }
-.col-img{
-    border: 2px solid #025585;
-    
-}
+
 
 .notice{
     list-style: none;
     background: #ffffff;
-    border-radius: 5px;
+    /* border-radius: 5px;
     border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
+    border-top-right-radius: 0px; */
     box-shadow: 1px 1px 6px rgb(144, 143, 143);
-    height: 37vh;
+    height: 39vh;
     overflow: hidden;
+    border: 5px solid #010f4e ;
+
 
    
    
@@ -64,10 +75,10 @@
 }
 .notice h4{
 
-    background-color: rgb(0, 37, 101);
+    background-color: #010f4e;
     color: rgb(255, 255, 255);
     padding: 5px;
-    box-shadow: 2px 4px 1px rgb(160, 159, 159);
+    box-shadow: 2px 0px 5px rgb(160, 159, 159);
     
 
 
@@ -75,29 +86,30 @@
 
 .carousel-inner img {
     width: 100%;
-    height: 77vh;
+    height: 79vh;
 }
 .carousel-caption{
     color: black;
 }
 .marqueeTwo{
     /* width: 100vw; */
-    height: 70vh ;
+    height: 70vh !important ;
     overflow: hidden; 
 }
 .marquee-image{
-    border: 5px solid rgb(0, 37, 101) ;
+    border: 5px solid #010f4e ;
+    height: 80vh;
     padding: 0px;
     box-shadow: 2px 4px 1px rgb(160, 159, 159);
 }
 .marquee-heading{
-    background-color: rgb(0, 37, 101);
+    background-color: #010f4e;
     padding: 4px;
     color: rgb(255, 255, 255);
 }
 .marqueeTwo-content{
     list-style: none;
-    height: 100%;
+    height: 77vh;
     animation: scrolling 15s linear infinite ;
 }
 @keyframes scrolling {
