@@ -1,10 +1,13 @@
 import React from 'react';
 
-const UpcomingNotice = () => {
+const UpcomingNotice = (props) => {
+    console.log(props.notice);
     return (
         <div>
-            <h1>upcoming Notice</h1>
-        </div>
+
+        <li>{props.notice.utitle}</li>
+
+      </div>
     );
 };
 
