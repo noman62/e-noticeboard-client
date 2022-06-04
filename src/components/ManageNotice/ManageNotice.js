@@ -6,7 +6,7 @@ import './ManageNotice.css';
 const ManageNotice = () => {
     const [ManageNotice, setManageNotice] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:8080/products')
+        fetch('https://immense-inlet-62545.herokuapp.com/products')
             .then(res => res.json())
             .then(data => setManageNotice(data))
     }, [])
@@ -14,7 +14,7 @@ const ManageNotice = () => {
    
 
     const handleDelete = (id) => {
-        fetch(`http://localhost:8080/delete/${id}`, {
+        fetch(`https://immense-inlet-62545.herokuapp.com/delete/${id}`, {
             method: 'DELETE'
         })
             .then(res => res.json())

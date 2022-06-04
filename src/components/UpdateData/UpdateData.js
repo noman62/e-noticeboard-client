@@ -17,7 +17,7 @@ const UpdateData = () => {
     })
 
     const fetchData = async () => {
-        const response = await fetch(`http://localhost:8080/products/${id}`);
+        const response = await fetch(`https://immense-inlet-62545.herokuapp.com/products/${id}`);
         const data = await response.json();
         console.log(data);
         setSingleNotice(data)
@@ -40,7 +40,7 @@ const UpdateData = () => {
         console.log(user);
 
         
-        const url = `http://localhost:8080/products/update/${id}`;
+        const url = `https://immense-inlet-62545.herokuapp.com/products/update/${id}`;
         fetch(url, {
             method: 'PUT',
             headers: {

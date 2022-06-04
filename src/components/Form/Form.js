@@ -25,7 +25,7 @@ const Form = () => {
     const handleSubmit = e => {
         e.preventDefault()
         const { noticeNo, title, shortTitle, batchName, date,utitle, imageURL } = user;
-        const url = `http://localhost:8080/addProduct`;
+        const url = `https://immense-inlet-62545.herokuapp.com/addProduct`;
         fetch(url, {
             method: 'POST',
             headers: {

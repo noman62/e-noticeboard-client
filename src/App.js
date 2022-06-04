@@ -7,6 +7,7 @@ import Register from "./components/Register/Register";
 import Deshboard from "./components/Deshboard/Deshboard";
 import ManageNotice from "./components/ManageNotice/ManageNotice";
 import Form from "./components/Form/Form";
+import CurrentDate from "./components/CurrentDate/CurrentDate";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
       <Route path="/upcomingNotice" element={<UpcomingNotice />} />
       <Route path="/updateNotice" element={<ManageNotice/>} />
       <Route path="/form" element={<Form/>} />
+      <Route path="/date" element={<CurrentDate/>} />
       
     </Routes>
   </div>

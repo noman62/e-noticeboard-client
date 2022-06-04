@@ -1,13 +1,14 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import CurrentDate from '../CurrentDate/CurrentDate';
 import Screen from '../Screen/Screen';
-import UpcomingNotice from '../UpcomingNotice/UpcomingNotice';
+
 
 const Homepage = () => {
   const [notices, setNotices] = useState([]);
 
   const fetchData = async () => {
-    const response = await fetch('http://localhost:8080/products');
+    const response = await fetch('https://immense-inlet-62545.herokuapp.com/products');
     const data = await response.json();
     setNotices(data);
     console.log(data);
@@ -30,7 +31,7 @@ const Homepage = () => {
               <h5 class="text-uppercase text-left font-weight-bolder">Noakhali Science and Technology University</h5>
               <h5 class="text-uppercase text-left font-weight-bolder">Department of Information and Communication Engineering</h5>
 
-              
+
 
             </div>
 
@@ -51,7 +52,7 @@ const Homepage = () => {
 
 
 
-       
+
 
         <div class="row mt-3">
 
@@ -63,7 +64,7 @@ const Homepage = () => {
                   return (
                     <div>
 
-                      <li style={{fontSize:'13px'}}>{latest.title}</li>
+                      <li style={{ fontSize: '13px' }}>{latest.title}</li>
 
                     </div>
                   )
@@ -78,7 +79,7 @@ const Homepage = () => {
                   return (
                     <div>
 
-                      <li style={{fontSize:'13px'}}>{latest.utitle}</li>
+                      <li style={{ fontSize: '13px' }}>{latest.utitle}</li>
 
                     </div>
                   )
@@ -88,7 +89,8 @@ const Homepage = () => {
 
           </div>
           <div class="col-md-8 p-1">
-            <div id="demo" class="carousel slide" data-ride="carousel">
+            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="60000" >
+
               <ul class="carousel-indicators">
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
                 <li data-target="#demo" data-slide-to="1"></li>
@@ -97,7 +99,7 @@ const Homepage = () => {
 
               <div class="carousel-inner">
                 {
-                  notices.map((notice, index) => <Screen index={index} notice={notice} />)
+                  notices.reverse().map((notice, index) => <Screen index={index} notice={notice} />)
                 }
               </div>
               <a class="carousel-control-prev" href="#demo" data-slide="prev">
@@ -110,7 +112,7 @@ const Homepage = () => {
             </div>
           </div>
           <div class="col-md-2 mt-1 marquee-image">
-            <h4 class="marquee-heading ">Achievements </h4>
+            <h4 class="marquee-heading ">Activities</h4>
             <div class="marqueeTwo">
 
               <ul class="marqueeTwo-content text-center">
@@ -134,55 +136,54 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-         
-          
-        </div>
-       
-
-
-
-
-
-
-        <footer>
-
-          <div class="row marquee" >
-            <div class="col-2 top-notice ">
-              <h5 class="text-center pt-1">Top Notice</h5>
-
-            </div>
-            <div class="col-8">
-              {
-                notices.reverse().map((latest, index) => {
-                  if (index === 0) {
-                    return (
-                      <div >
-
-                        <marquee behavior="" direction="">{latest.shortTitle}</marquee>
-
-                      </div>
-                    )
-                  }
-                })
-              }
-            </div>
-            <div class="col-2 top-time ">
-              <p class="mb-0">
-                <b>Time:</b> 11:32 <br/>
-                <b>Date:</b> 11/11/22
-                </p>
-
-            </div>
-            
-          </div>
-
-        </footer>
-
-
 
 
       </div>
-    
+
+
+
+
+
+
+
+      <footer>
+
+        <div class="row marquee" >
+          <div class="col-2 top-notice ">
+            <h5 class="text-center pt-2">Top Notice</h5>
+
+          </div>
+          <div class="col-8">
+            {
+              notices.reverse().map((latest, index) => {
+                if (index === 0) {
+                  return (
+                    <div >
+
+                      <marquee behavior="" direction="">{latest.shortTitle}</marquee>
+
+                    </div>
+                  )
+                }
+              })
+            }
+          </div>
+          <div class="col-2 top-time ">
+            <p class="mb-0">
+              <CurrentDate />
+            </p>
+
+          </div>
+
+        </div>
+
+      </footer>
+
+
+
+
+    </div>
+
   );
 };
 

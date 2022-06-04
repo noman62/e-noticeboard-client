@@ -17,7 +17,7 @@
 .main-heading{
     background-color: #010f4e;
     color: white; 
-    font-style:oblique;
+    /* font-style:oblique; */
     border-bottom: 5px solid #010f4e;
 }
 .marquee{
