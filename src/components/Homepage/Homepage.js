@@ -89,7 +89,7 @@ const Homepage = () => {
 
           </div>
           <div class="col-md-8 p-1">
-            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="60000" >
+            <div id="demo" class="carousel slide" data-ride="carousel" data-interval="10000" >
 
               <ul class="carousel-indicators">
                 <li data-target="#demo" data-slide-to="0" class="active"></li>
