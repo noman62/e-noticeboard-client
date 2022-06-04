@@ -170,7 +170,7 @@ const Homepage = () => {
           </div>
           <div class="col-2 top-time ">
             <p class="mb-0">
-              <CurrentDate />
+              {/* <CurrentDate /> */}
             </p>
 
           </div>
